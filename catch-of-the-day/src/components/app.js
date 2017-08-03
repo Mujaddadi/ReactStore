@@ -8,8 +8,8 @@ class App extends React.Component{
 
     render(){
         return (
-        <div>
-            <div>
+        <div className="catch-of-the-day">
+            <div className="menu">
                 <Header />
                 <Order />
                 <Inventory />
