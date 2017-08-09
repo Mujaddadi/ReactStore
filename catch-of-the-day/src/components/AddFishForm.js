@@ -15,7 +15,6 @@ class AddFishForm extends React.Component {
         }
         
         this.props.addFish(fish);
-
         this.fishForm.reset();
 
     }
@@ -38,6 +37,10 @@ class AddFishForm extends React.Component {
             
         );
     }
+}
+
+AddFishForm.propTypes = {
+     addFish: React.PropTypes.func.isRequired
 }
 
 
