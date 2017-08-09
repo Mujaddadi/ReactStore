@@ -5,7 +5,7 @@ class Inventory extends React.Component {
     constructor(){
         super();
 
-        this.renderInventory = this.renderInventory.bind(this);
+        //this.renderInventory = this.renderInventory.bind(this);
         this.handleChange = this.handleChange.bind(this);
     }
 
@@ -19,10 +19,10 @@ class Inventory extends React.Component {
         this.props.updateFish(key, updatedFish);
     }
 
-    renderInventory(key){
+    renderInventory = (key)=>{
         const fish = this.props.fishes[key];
         return (
-           <div className="fishEdit" key={key}>
+           <div className="fish-edit" key={key}>
             <input type="text" name="name"   value={fish.name}  placeholder="Fish Name" onChange={(e) => this.handleChange(e, key)}/>
             <input type="text" name="price"  value={fish.price} placeholder="Fish Price" onChange={(e) => this.handleChange(e, key)}/>
             <select type="text" name="status"    value={fish.status}   placeholder="Fish Status" onChange={(e) => this.handleChange(e, key)}>
@@ -35,7 +35,7 @@ class Inventory extends React.Component {
             <button onClick={()=>{ this.props.removeFish(key)}}>Remove Fish</button>
            </div>
         )
-    }
+    };
 
 
     render(){
